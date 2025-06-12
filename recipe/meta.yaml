@@ -3,11 +3,11 @@
 
 package:
   name: {{ name|lower }}
-  version: "0.15.3"
+  version: "0.15.4"
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bioat-{{ version }}.tar.gz
-  sha256: "c34b8fcec26cb07d1be74ec391096ce62831c931b331d47f25c49ab7f30959e0"
+  sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 
 build:
   entry_points:
@@ -44,7 +44,7 @@ requirements:
     - py3dmol >=2.4.2
     - ipykernel >=6.0.0
     - ipython <9.0.0
-    
+    - json-log-formatter >=1.1.1,<2.0.0
 
 test:
   imports:
