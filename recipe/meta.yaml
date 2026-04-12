@@ -1,13 +1,12 @@
-{% set name = "bioat" %}
-{% set version = "0.16.4" %}
+{% set version = "0.17.1" %}
 
 package:
-  name: {{ name|lower }}
-  version: "0.16.4"
+  name: bioat
+  version: "0.17.1"
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bioat-{{ version }}.tar.gz
-  sha256: "a9be34d489cd69f124d4c3e296579347a030dc6f4766c97d6bc6e9f415951b23"
+  url: https://pypi.org/packages/source/b/bioat/bioat-{{ version }}.tar.gz
+  sha256: "0672ee8b34cd71b1368b1ed72c4602bb4f9135e513848a6ef681ea0a810c67de"
 
 build:
   entry_points:
@@ -43,7 +42,7 @@ requirements:
     - seaborn >=0.13.2
     - py3dmol >=2.4.2
     - ipykernel >=6.0.0
-    - ipython <9.0.0
+    - ipython <10.0.0
 
 test:
   imports:
@@ -53,10 +52,12 @@ test:
     - bioat --help
   requires:
     - pip
+    - python
 
 about:
   home: https://github.com/hermanzhaozzzz/bioat
   summary: bioat, a python package & command line toolkit for Bioinformatics and data science!
+  doc_url: https://bioat.readthedocs.io/en/latest/
   license: Apache-2.0
   license_file: LICENSE
 
